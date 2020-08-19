@@ -18,7 +18,7 @@ void _fix_path(char** argv, char* upath) {
 void run_command(char** argv) {
    char cmd[1024] = {0};
 
-   strcpy(cmd, "$SHELL -i -c \"");
+   /* strcpy(cmd, "$SHELL -i -c \""); */
    while (*argv) {
       if (strcmp(*argv, "--") == 0) {
          _fix_path(++argv, cmd);
@@ -28,7 +28,7 @@ void run_command(char** argv) {
       strcat(cmd, " ");
       ++argv;
    }
-   strcat(cmd, " > /dev/null 2>&1; exit\"");
+   /* strcat(cmd, " > /dev/null 2>&1; exit\""); */
 
    system(cmd);
 }
