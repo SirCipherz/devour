@@ -17,8 +17,6 @@ void _fix_path(char** argv, char* upath) {
 
 void run_command(char** argv) {
    char cmd[1024] = {0};
-
-   /* strcpy(cmd, "$SHELL -i -c \""); */
    while (*argv) {
       if (strcmp(*argv, "--") == 0) {
          _fix_path(++argv, cmd);
@@ -28,15 +26,13 @@ void run_command(char** argv) {
       strcat(cmd, " ");
       ++argv;
    }
-   /* strcat(cmd, " > /dev/null 2>&1; exit\""); */
-
    system(cmd);
 }
 
 int main(int argc, char** argv) {
    int rev;
    Window win;
-   Display* dis = XOpenDisplay(NULL);
+   Display* dis = XOpenDisplay(0);
 
    XGetInputFocus(dis, &win, &rev);
    XUnmapWindow(dis, win);
