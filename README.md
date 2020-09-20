@@ -6,12 +6,6 @@ Devour was inspired by
 and is a successor to
 [devour.sh](https://github.com/salman-abedin/devour.sh)
 
-![](preview.gif)
-
-# Demonstration done by [DistroTube](https://www.youtube.com/channel/UCVls1GmFKf6WlTraIb_IaJg)
-
-[![](youtube.png)](https://www.youtube.com/watch?v=mBNLzHcUtTo&t=5m22s)
-
 ## Libraries
 
 -  Xlib (client-side header files)
