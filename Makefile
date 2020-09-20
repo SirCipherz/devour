@@ -3,7 +3,7 @@
 NAME    = devour
 VERSION = 11.0
 
-CC     = cc
+CC     = gcc
 CFLAGS = -std=c11 -D_POSIX_C_SOURCE=200809L -Wall -Wextra -pedantic -O2
 LDLIBS = -s -lX11
 
